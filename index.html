@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>Real madred</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://www.realmadrid.com/StaticFiles/RealMadridResponsive/images/static/twitter-image.png"
+    />
+  </head>
+  <body>
+    <ul>
+      <li id="navbar">
+        <a class="active" href="https://www.realmadrid.com/en">
+          <img
+            src="https://www.realmadrid.com/StaticFiles/RealMadridResponsive/images/static/twitter-image.png"
+            id="realMadrid"
+            width="50px"
+          />
+        </a>
+      </li>
+      <li id="navbar"><a class="active" href="index.html">Home</a></li>
+      <li id="navbar"><a href="real madred.html"> players </a></li>
+      <li id="navbar"><a href="championships.html"> championships</a></li>
+      <li id="navbar"><a href="#about"></a></li>
+      <li>
+        <img
+          src="https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png"
+          width="50px"
+          id="profPic"
+        />
+      </li>
+    </ul>
+
+    <ul id="list">
+      <li>Arribas</li>
+      <li>mendy</li>
+      <li>Ceballos</li>
+    </ul>
+    <input type="text" id="addedText" />
+    <button onclick="Add()">Add</button>
+
+    <div id="real">
+      <h1>Real madred</h1>
+    </div>
+    <div id="valverde"></div>
+
+    <h3>valverde</h3>
+    <p>
+      Valverde spent most of his youth career with Peñarol, where he quickly
+      made an impression; he made his senior debut for the club in their first
+      fixture of the 2015–16 season against Cerro. [3] He became part of the
+      Uruguayan national youth teams and attracted the interest of European
+      clubs like Arsenal, Barcelona, Chelsea and Real Madrid.
+    </p>
+    <img
+      src="https://icdn.football-espana.net/wp-content/uploads/2022/10/Fede-Valverde-Haaland.jpg "
+      alt=""
+      width="30%"
+    />
+    <img src="paris.jpg" alt="Paris" class="center" />
+    <a href="https://en.wikipedia.org/wiki/Federico_Valverde">Click here</a>
+    <button onclick="alert('back to the home real madread cristiano ronaldo')">
+      Cristiano
+    </button>
+    <br />
+    <input type="file" id="image" onchange="changeprofile()" />
+    <br />
+    <button id="" onclick="changeColor()">Change color</button>
+    <br />
+    <input id="colorPicker" type="color" onchange="changeBackground()" />
+    <ul>
+      <li>champion's league</li>
+      <li>la league</li>
+      <li>kings cup</li>
+      <li>league cup</li>
+    </ul>
+    <ol>
+      <li>la league</li>
+      <li>king cup</li>
+      <li>league cup</li>
+      <li>champion league</li>
+    </ol>
+
+    <script>
+      function Add() {
+        var ul = document.getElementById("list");
+        var li = document.createElement("li");
+        li.appendChild(
+          document.createTextNode(document.getElementById("addedText").value)
+        );
+        ul.appendChild(li);
+      }
+
+      function changeprofile() {
+        var newimage = document.getElementById("image").files[0].name;
+        document.getElementById("profPic").src = newimage;
+      }
+
+      var C = 7;
+      var R = 28;
+      var I = 35;
+      function changeColor() {
+        document.body.style.background = "blue";
+        alert("color  changed to blue");
+      }
+      function changeBackground() {
+        var rgbvalue = document.getElementById("colorPicker").value;
+        document.body.style.background = rgbvalue;
+      }
+    </script>
+    <a href="'"></a>
+    <div class="footer">
+      <a href="index.html">Home</a>
+      <p></p>
+      <a href="https://www.realmadrid.com/en">More Info about Real Madrid</a>
+      <p></p>
+      <a
+        href="https://www.google.com/search?q=name+champions+real+madrid&rlz=1C1YTUH_enIL1037IL1037&sxsrf=AJOqlzV5TubG3YPp5eXX9dcd6wIlv4fojQ%3A1676122388698&ei=FJnnY6umKpG5sAfn3qmwBQ&ved=0ahUKEwirgNC8yo39AhWRHOwKHWdvClYQ4dUDCA8&uact=5&oq=name+champions+real+madrid&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIJCAAQCBAeEPEEMgUIABCGAzIFCAAQhgMyBQgAEIYDMgUIABCGAzIFCAAQhgM6CggAEEcQ1gQQsAM6BwgjELACECc6CQgAEAcQHhDxBDoLCAAQBxAeEPEEEAo6BwgAEA0QgAQ6CwgAEAgQBxAeEPEEOggIABAIEAcQHjoKCAAQCBAHEB4QD0oECEEYAEoECEYYAFD9E1iCImDqKWgBcAF4AIABqAGIAYsGkgEDMC41mAEAoAEByAEIwAEB&sclient=gws-wiz-serp"
+        >Championships</a
+      >
+    </div>
+  </body>
+</html>
